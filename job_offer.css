@@ -31,8 +31,8 @@ body {
 
 .form-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Single column layout */
-    gap: 15px; /* Space between rows */
+    grid-template-columns: 1fr; 
+    gap: 15px; 
 }
 
 .label {
@@ -65,5 +65,5 @@ body {
 }
 
 .submit-btn:hover {
-    background-color: black; /* Darker shade on hover */
+    background-color: black; 
 }
