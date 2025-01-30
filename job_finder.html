@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job and Internship Portal</title>
+    <link rel="stylesheet" href="job_finder.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="mainpage.html" class="home-button">Home</a>
+            <h1>Job and Internship Portal</h1>
+        </div>
+        <div class="search-filter">
+            <input type="text" id="search" placeholder="Search jobs...">
+            <select id="location">
+                <option value="">Select Location</option>
+                <option value="New York">New York</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="London">London</option>
+                <option value="Berlin">Berlin</option>
+            </select>
+            <button id="filter-btn">Filter</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="job-listings">
+            <div class="job-card" data-location="New York">
+                <h2>Software Engineer</h2>
+                <p>Company: Tech Corp</p>
+                <p>Location: New York</p>
+                <p>Description: We are looking for a skilled software engineer...</p>
+                <a href="#">Apply Now</a>
+            </div>
+            <div class="job-card" data-location="San Francisco">
+                <h2>Data Analyst</h2>
+                <p>Company: Data Inc.</p>
+                <p>Location: San Francisco</p>
+                <p>Description: We are seeking a data analyst to join our team...</p>
+                <a href="#">Apply Now</a>
+            </div>
+            <div class="job-card" data-location="London">
+                <h2>Marketing Intern</h2>
+                <p>Company: Market Pro</p>
+                <p>Location: London</p>
+                <p>Description: Join our marketing team as an intern...</p>
+                <a href="#">Apply Now</a>
+            </div>
+            <div class="job-card" data-location="Berlin">
+                <h2>Product Manager</h2>
+                <p>Company: Innovate GmbH</p>
+                <p>Location: Berlin</p>
+                <p>Description: We are hiring a product manager to lead our team...</p>
+                <a href="#">Apply Now</a>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

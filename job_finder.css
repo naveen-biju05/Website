@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color:black;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.home-button {
+    position: absolute;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.home-button:hover {
+    background-color: black;
+}
+
+.search-filter {
+    margin-top: 20px;
+}
+
+.search-filter input, .search-filter select, .search-filter button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-filter input {
+    width: 300px;
+}
+
+.search-filter select {
+    width: 200px;
+}
+
+.search-filter button {
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-filter button:hover {
+    background-color: black;
+}
+
+main {
+    padding: 20px;
+}
+
+.job-listings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.job-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: calc(33.333% - 40px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.job-card h2 {
+    margin-top: 0;
+}
+
+.job-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.job-card a:hover {
+    background-color: #007BFF;
+}
+
+footer {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

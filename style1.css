@@ -1,0 +1,75 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Light background for better contrast */
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Title Styling */
+.site-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Wrapper for Forms */
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* Form Styling */
+.login-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Prevents stretching */
+}
+
+/* Input Fields */
+.input-box {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+/* Input Field Styles */
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 12px 15px; /* Space for label */
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: #000; /* Black background */
+    color: #fff; /* White text */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #333; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+   .site-title {
+       font-size: 36px; /* Smaller title on smaller screens */
+   }
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="resume.css">
+    <!-- Include jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <nav>
+                <a href="mainpage.html" class="home-button">Home</a>
+                <div class="logo">DailyBread</div>
+            </nav>
+        </header>
+        <div class="header">
+            <span class="create-your-resume">Create Your Resume</span>
+            <br>
+            <span class="fill-in-your-information">Fill in your information to generate a professional resume</span>
+        </div>
+        <div class="form">
+            <!-- Personal Information -->
+            <div class="section">
+                <div class="h">
+                    <span class="personal-information">Personal Information</span>
+                </div>
+                <div class="div-2">
+                    <div class="flex-row-bb">
+                        <div class="div-3">
+                            <div class="label">
+                                <span class="first-name">First Name</span>
+                            </div>
+                            <input class="input" type="text" id="firstName">
+                        </div>
+                        <div class="div-4">
+                            <div class="label">
+                                <span class="last-name">Last Name</span>
+                            </div>
+                            <input class="input" type="text" id="lastName">
+                        </div>
+                    </div>
+                    <div class="flex-row-df">
+                        <div class="div-7">
+                            <div class="label">
+                                <span class="email">Email</span>
+                            </div>
+                            <input class="input" type="email" id="email">
+                        </div>
+                        <div class="div-a">
+                            <div class="label">
+                                <span class="phone">Phone</span>
+                            </div>
+                            <input class="input" type="tel" id="phone">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Summary -->
+            <div class="section">
+                <div class="h">
+                    <span class="professional-summary">Professional Summary</span>
+                </div>
+                <textarea class="textarea" id="summary" placeholder="Write a brief summary of your professional background..."></textarea>
+            </div>
+
+            <!-- Work Experience -->
+            <div class="section">
+                <div class="h">
+                    <span class="work-experience">Work Experience</span>
+                </div>
+                <div class="div-12">
+                    <div class="div-13">
+                        <div class="div-14">
+                            <div class="flex-row-eb">
+                                <div class="div-15">
+                                    <div class="label">
+                                        <span class="company-name">Company Name</span>
+                                    </div>
+                                    <input class="input" type="text" id="companyName">
+                                </div>
+                                <div class="div-18">
+                                    <div class="label">
+                                        <span class="job-title">Job Title</span>
+                                    </div>
+                                    <input class="input" type="text" id="jobTitle">
+                                </div>
+                            </div>
+                            <div class="flex-row-fda">
+                                <div class="div-1b">
+                                    <div class="label">
+                                        <span class="start-date">Start Date</span>
+                                    </div>
+                                    <input class="input" type="date" id="startDate">
+                                </div>
+                                <div class="div-20">
+                                    <div class="label">
+                                        <span class="end-date">End Date</span>
+                                    </div>
+                                    <input class="input" type="date" id="endDate">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="div-26">
+                            <div class="label">
+                                <span class="job-description">Job Description</span>
+                            </div>
+                            <textarea class="textarea" id="jobDescription"></textarea>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <span class="add-another-experience">Add Another Experience</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <div class="h">
+                    <span class="education">Education</span>
+                </div>
+                <div class="div-2d">
+                    <div class="div-2e">
+                        <div class="div-2f">
+                            <div class="flex-row-d">
+                                <div class="div-30">
+                                    <div class="label">
+                                        <span class="institution-name">Institution Name</span>
+                                    </div>
+                                    <input class="input" type="text" id="institutionName">
+                                </div>
+                                <div class="div-33">
+                                    <div class="label">
+                                        <span class="degree">Degree</span>
+                                    </div>
+                                    <input class="input" type="text" id="degree">
+                                </div>
+                            </div>
+                            <div class="flex-row-e">
+                                <div class="div-36">
+                                    <div class="label">
+                                        <span class="start-date">Start Date</span>
+                                    </div>
+                                    <input class="input" type="date" id="eduStartDate">
+                                </div>
+                                <div class="div-20">
+                                    <div class="label">
+                                        <span class="end-date">End Date</span>
+                                    </div>
+                                    <input class="input" type="date" id="eduEndDate">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="submit-btn">
+                        <span class="add-education">Add Another Education</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="section">
+                <div class="h">
+                    <span class="skills">Skills</span>
+                </div>
+                <input class="input-field" type="text" id="skills" placeholder="Add your skills (separated by commas)">
+            </div>
+
+            <!-- Buttons -->
+            <div class="container-45">
+                <button class="submit-btn preview-btn">Preview</button>
+                <button class="submit-btn generate-resume-btn">Generate Resume</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="resumePreview">
+                <!-- Preview content will be inserted here -->
+            
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account | DailyBread</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<h1 class="site-title">Create Account</h1>
+
+<div class="wrapper">
+  <form id="accountCreationForm" class="login-form">
+    <!-- User Type Selection -->
+    <div class="input-box">
+      <label for="userType">Select User Type:</label><br/>
+      <select id="userType" required>
+        <option value="" disabled selected>Select User Type</option>
+        <option value="employer">Employer</option>
+        <option value="normal">Normal User</option>
+      </select>
+    </div>
+
+    <!-- Username -->
+    <div class="input-box">
+      <label for="username">Username:</label><br/>
+      <input type="text" id="username" placeholder="Enter Username" required>
+    </div>
+
+    <!-- Password -->
+    <div class="input-box">
+      <label for="password">Password:</label><br/>
+      <input type="password" id="password" placeholder="Enter Password" required>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn">Create Account</button>
+  </form>
+</div>
+
+<script>
+// Handle account creation
+document.getElementById('accountCreationForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const userType = document.getElementById('userType').value;
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Store username and password in local storage (for demo purposes)
+    localStorage.setItem(`${userType}_${username}`, password);
+    
+    alert(`${userType.charAt(0).toUpperCase() + userType.slice(1)} account created successfully!`);
+    
+    // Redirect back to login page
+    window.location.href = "index.html";
+});
+</script>
+
+</body>
+</html>

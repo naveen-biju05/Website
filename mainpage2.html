@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DailyBread (Employee)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional Styles for Header */
+        .header {
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between; /* Space between items */
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 48px; /* Increase font size for the title */
+            margin: 0; /* Remove default margin */
+        }
+
+        .logout-btn {
+            background-color: #fff; /* White background for button */
+            color: #000; /* Black text */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px; /* Padding for button */
+            cursor: pointer;
+            font-size: 16px; /* Font size for button text */
+            transition: background-color 0.3s; /* Transition effect */
+        }
+
+        .logout-btn:hover {
+            background-color: #ddd; /* Change color on hover */
+        }
+
+        .divider {
+            height: 2px; /* Height of the divider line */
+            background-color: #000; /* Color of the divider line */
+            margin-top: 10px; /* Space above the line */
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Space between boxes */
+            margin-top: 20px; /* Space below navbar */
+        }
+
+        .box {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            width: 200px; /* Fixed width for boxes */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: transform 0.2s; /* Animation effect */
+        }
+
+        .box:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        .box h2 {
+            margin-bottom: 10px; /* Space below title */
+        }
+
+        .box p {
+            font-size: 14px; /* Smaller font for subtext */
+            color: #777; /* Lighter color for subtext */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>DailyBread</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="container">
+        <div class="box" onclick="window.location.href='job_offer.html'">
+            <h2>Recruit Employee</h2>
+            <p>Post job openings.</p>
+        </div>
+        
+        <div class="box" onclick="window.location.href='internship.html'">
+            <h2>Internship Announcements</h2>
+            <p>Announce internships.</p>
+        </div>
+
+        <div class="box" onclick="alert('Applications feature coming soon!')">
+            <h2>Applications</h2>
+            <p>View applications.</p>
+        </div>
+    </div>
+
+    <script>
+      // Logout function
+      function logout() {
+          localStorage.removeItem('username'); // Clear username from local storage
+          alert('You have logged out successfully.');
+          window.location.href = "index.html"; // Redirect to login page
+      }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  /* Title Styling */
+  .site-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Wrapper for Login Forms */
+  .wrapper {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Login Form Styling */
+  .login-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Prevents stretching */
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  /* Input Fields */
+  .input-box {
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 350px; /* Keeps input fields uniform */
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-box input {
+    width: 100%;
+    padding: 12px 15px 12px 40px; /* Space for icon */
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .input-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #777;
+  }
+  
+  /* Remember Me & Forgot Password */
+  .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  /* Buttons */
+  .btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    background: #333;
+  }
+  
+  /* Register Link */
+  .register-link {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .register-link a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 800px) {
+    .wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .site-title {
+      text-align: center;
+      font-size: 36px;
+    }
+  }
+  
