@@ -12,7 +12,6 @@
 
 <div class="wrapper">
   <form id="accountCreationForm" class="login-form">
-    <!-- User Type Selection -->
     <div class="input-box">
       <label for="userType">Select User Type:</label><br/>
       <select id="userType" required>
@@ -22,25 +21,24 @@
       </select>
     </div>
 
-    <!-- Username -->
     <div class="input-box">
       <label for="username">Username:</label><br/>
       <input type="text" id="username" placeholder="Enter Username" required>
     </div>
 
-    <!-- Password -->
+    
     <div class="input-box">
       <label for="password">Password:</label><br/>
       <input type="password" id="password" placeholder="Enter Password" required>
     </div>
 
-    <!-- Submit Button -->
+    
     <button type="submit" class="btn">Create Account</button>
   </form>
 </div>
 
 <script>
-// Handle account creation
+
 document.getElementById('accountCreationForm').addEventListener('submit', function(event) {
     event.preventDefault();
     
@@ -48,12 +46,12 @@ document.getElementById('accountCreationForm').addEventListener('submit', functi
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    // Store username and password in local storage (for demo purposes)
+      
     localStorage.setItem(`${userType}_${username}`, password);
     
     alert(`${userType.charAt(0).toUpperCase() + userType.slice(1)} account created successfully!`);
     
-    // Redirect back to login page
+    
     window.location.href = "index.html";
 });
 </script>
