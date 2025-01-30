@@ -10,7 +10,6 @@
 <body>
   <h1 class="site-title">DailyBread</h1>
   <div class="wrapper">
-    <!-- Employer Login Form -->
     <div class="login-form employer-login">
       <form id="employerLoginForm">
         <h1>Employer Login</h1>
@@ -33,7 +32,6 @@
       </form>
     </div>
 
-    <!-- Normal Login Form -->
     <div class="login-form normal-login">
       <form id="normalLoginForm">
         <h1>Normal Login</h1>
@@ -58,17 +56,16 @@
   </div>
 
   <script>
-    // Handle login form submissions
     document.getElementById('employerLoginForm').addEventListener('submit', function(event) {
       event.preventDefault();
       const username = this.querySelector('input[type="text"]').value;
       const password = this.querySelector('input[type="password"]').value;
 
-      // Validate credentials
+  
       const storedPassword = localStorage.getItem(`employer_${username}`);
       if (storedPassword && storedPassword === password) {
           alert('Employer login successful!');
-          window.location.href = "mainpage2.html"; // Redirect to main page for employers after login
+          window.location.href = "mainpage2.html"; 
       } else {
           alert('Invalid employer credentials.');
       }
@@ -79,11 +76,11 @@
       const username = this.querySelector('input[type="text"]').value;
       const password = this.querySelector('input[type="password"]').value;
 
-      // Validate credentials
+      
       const storedPassword = localStorage.getItem(`normal_${username}`);
       if (storedPassword && storedPassword === password) {
           alert('Normal user login successful!');
-          window.location.href = "mainpage.html"; // Redirect to main page for normal users after login
+          window.location.href = "mainpage.html"; 
       } else {
           alert('Invalid normal user credentials.');
       }
