@@ -1,24 +1,36 @@
+/* General Styles */
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9; /* Light background for contrast */
+    color: #333; /* Darker text for readability */
 }
 
 .main-container {
+    max-width: 800px; /* Restrict width for better form layout */
+    margin: 40px auto;
     padding: 20px;
+    background: #fff; /* White background for form */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .header {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .create-your-internship-post {
     font-size: 36px;
-    font-weight: 600;
+    font-weight: 700;
+    color: #222; /* Slightly darker color */
 }
 
 .fill-in-internship-details {
     font-size: 18px;
+    font-weight: 400;
+    color: #666; /* Lighter color for a softer feel */
 }
 
 .form {
@@ -29,37 +41,55 @@ body {
     margin-bottom: 20px;
 }
 
+/* Label Styles */
 .label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #444;
 }
 
+/* Input & Textarea Styles */
 .input, .textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 6px;
     border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.input:focus, .textarea:focus {
+    border-color: #000; /* Highlight on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .textarea {
-   height: 100px; 
+    height: 120px; /* Increased height */
+    resize: vertical; /* Allow vertical resizing */
 }
 
+/* Button Styles */
 .container-45 {
-   display: flex; 
-   justify-content: center; 
+    display: flex;
+    justify-content: center;
 }
 
 .submit-btn { 
-   background-color:#000; 
-   color:#fff; 
-   border:none; 
-   border-radius:5px; 
-   padding:10px 20px; 
-   cursor:pointer; 
+    background-color: #000; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 12px 25px; 
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer; 
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 } 
 
 .submit-btn:hover { 
-   background-color:#444; /* Darker shade on hover */ 
+    background-color: #222; /* Slightly lighter shade */
+    transform: translateY(-2px); /* Lift effect on hover */
 }
